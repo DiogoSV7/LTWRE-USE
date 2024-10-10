@@ -1,0 +1,307 @@
+body {  
+    margin: 0 auto;
+    background-image: url("../docs/images/website_background.png");
+    width: 80em;
+    
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header"
+                         "menu menu"
+                         "signup signup"
+                         "details details"
+                         "aside items"
+                         "footer footer";
+}
+
+body > header {
+    grid-area: header;
+}
+
+#menu {
+    grid-area: menu;
+}
+
+aside {
+    grid-area: aside;
+}
+
+#items {
+    grid-area: items;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+
+
+/* header layout */
+
+
+body > header {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+body > header h1{
+    display: flex;
+    justify-content: center;
+}
+
+#signup, #user-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+
+#cart-flex {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cart-items p {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* menu layout */
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+#menu li {
+    display: block;
+    flex: 1;
+}
+
+/* search layout */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* items layout */
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#items > h2 {
+    width: 100%;
+}
+
+#items > article {
+    width: 49%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#items .item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* signup/add publication/edit item layout */
+
+#register, #login, #add-publication, #edit-item {
+    grid-area: signup;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* item layout */
+
+#item-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#item-details header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#item-details header h2 {
+    flex: 1;
+    text-align: center;
+}
+
+#item-details article {
+    display: flex;
+    align-items: center;
+}
+
+#item-details .buttons {
+    justify-content: center;
+    gap: 1em;
+    margin-top: 20px; 
+    display: flex;
+}
+
+/* user profile layout */
+
+#user-profile {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+/* admin layout */
+
+#admin {
+    grid-area: details;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* order/shipping layout */
+
+#orders, #shipping-forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* edit profile/item layout */
+
+#edit-profile-form, #edit-item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* chats layout */
+
+.chats, .chat {
+    margin: 1em auto;
+    padding: 1em;
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messages-container {
+    width: 100%;
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chats article, .chat header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.chat .message_incoming {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chat .message_outgoing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message_incoming {
+    align-self: flex-start;
+}
+
+.message_outgoing {
+    align-self: flex-end;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-input {
+    display: flex;
+    align-items: center;
+}
+
+/*cart layout*/
+
+#cart {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* checkout layout */
+
+#checkout {
+    grid-area: signup;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* shipping form layout */
+
+
+@media print {
+     #shipping-form {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
